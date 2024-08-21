@@ -77,6 +77,11 @@
     max-width: 540px;
   }
 }
+@media (min-width: 414px) {
+  .container-sm, .container {
+    max-width: 736px;
+  }
+}
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
     max-width: 720px;
