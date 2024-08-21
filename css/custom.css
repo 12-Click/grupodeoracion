@@ -1,1 +1,17 @@
-/* your styles go here */
+/* Target iPhone 7 Plus in portrait mode */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+    /* Add your CSS rules for the iPhone 7 Plus here */
+    body {
+        font-size: 16px; /* Example adjustment */
+    }
+    /* Further customizations */
+}
+
+/* Target iPhone 7 Plus in landscape mode */
+@media only screen and (min-device-width: 736px) and (max-device-width: 414px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 3) {
+    /* Add your CSS rules for the iPhone 7 Plus here */
+    body {
+        font-size: 16px; /* Example adjustment */
+    }
+    /* Further customizations */
+}
