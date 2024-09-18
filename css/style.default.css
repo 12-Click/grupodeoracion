@@ -10965,14 +10965,16 @@ a {
 * HERO
 * ==========================================
 *
-*/
-.hero-slide,
-.hero {
+/* Ensure the hero slides adapt to smaller screens */
+.hero-slide {
+  background-size: cover;
+  background-position: center;
   position: relative;
+  min-height: 35rem; /* Reduce min-height for better fit on smaller screens */
 }
 
-.hero-slide::before,
-.hero::before {
+/* Gradient overlay for hero slides */
+.hero-slide::before {
   content: '';
   position: absolute;
   top: 0;
@@ -10981,6 +10983,33 @@ a {
   left: 0;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
   display: block;
+}
+
+/* Adjustments for smaller screen sizes */
+@media (max-width: 767px) {
+  .hero-slide {
+    min-height: 25rem; /* Further reduce height for smaller screens */
+  }
+
+  /* Fix text size for mobile */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p.lead {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-slide {
+    min-height: 30rem; /* Adjust height for medium-sized screens */
+  }
 }
 
 @media (min-width: 992px) {
@@ -10994,7 +11023,6 @@ a {
     min-height: 45rem;
   }
 }
-
 /*
 * ===================================================
 *    Custom Orion Icons
